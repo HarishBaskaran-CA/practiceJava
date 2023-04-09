@@ -15,16 +15,7 @@ public class Print20Numbers {
     }
 }
 
-    /*
-        Examples
-        1. Scanner - print all possible data types
-        2. For loop - solve as many problems
-            1. Display a Text Five Times
-            2. Display Sum of n Natural Numbers
-            3. Increment
-            4. Decrement
-            5.
-     */
+
 
 // Learnt on April 09
 /*
