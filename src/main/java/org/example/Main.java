@@ -2,9 +2,10 @@ package org.example;
 
 
 public class Main {
+
     // class & objects
     // variable
-        /*git add .
+        /*
             1. char
             2. string
             3. int
@@ -21,10 +22,35 @@ public class Main {
             2. switch // less priority
             3. for loop
          */
+    // Access modifiers
+    // Keywords
+        /*
+            1. static
+            2. final
+         */
+
+
 
     public static void main(String[] args) {
+        Runner runner_1 = new Runner();
+        Runner runner_2 = new Runner();
 
-        // Rock paper scissors ?
+//        runner_1.name = "sumathi";
+//        runner_2.name = "yamini";
+
+
+
+        String value_1 = runner_1.name;
+        String value_2 = runner_2.name;
+
+        System.out.println( value_1 +"---" + value_2);
+    }
+}
+
+
+/*
+
+ // Rock paper scissors ?
 
         String user1 = "rock";
         String user2 = "rock";
@@ -52,7 +78,10 @@ public class Main {
         }
 
     }
-}
+
+ */
+
+
 
 /*
         if(number <10 ) {

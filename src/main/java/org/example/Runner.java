@@ -3,20 +3,30 @@ package org.example;
 public class Runner {
 
     public char character = 'H';
-    public String name = "Harish";
+    public static final String name = "Harish";
     public int number = 12;
     public boolean flag = true;
     public double decimal = 1.23;
 
-    public void print () {
+
+    public static final String SEND_MESSAGE_TEXTBOX = "//textarea";
+
+    /* ACCESS MODIFIERS
+    1. public - project level
+    2. protected - package level
+    3. private - class level
+     */
+
+
+    protected void print () {
         System.out.println("Hi there i work from runner");
     }
 
-    public void print2 (String text) {
+    private void print2 (String text) {
         System.out.println(text);
     }
 
-    public void print2 (int value) {
+    public void print3 (int value) {
         System.out.println(value);
     }
 }
