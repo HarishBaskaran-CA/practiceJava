@@ -10,6 +10,7 @@ public class Print20Numbers {
     public void callingNumbers(int number) {
         for (int i = number; i < number + 20; i++) {
             System.out.print(i+",");
+            System.out.println();
         }
     }
 }
