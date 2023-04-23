@@ -39,7 +39,6 @@ public class Main {
 //        runner_2.name = "yamini";
 
 
-
         String value_1 = runner_1.name;
         String value_2 = runner_2.name;
 
