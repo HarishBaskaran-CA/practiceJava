@@ -3,6 +3,7 @@ package org.selenium;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -34,13 +35,27 @@ public class firstTestCase {
 
     @BeforeMethod
     public void openDriver_Website() throws MalformedURLException {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notification");
+        driver = new ChromeDriver(options);
 
 //        driver = new RemoteWebDriver(new URL("http://localhost:4444"));
 
         driver.get("https://www.google.co.in/");
         driver.getTitle();
         driver.getCurrentUrl();
+
+//        class interface enum @interface-annotation
+//
+//                String name = "Harish"; - class
+//
+//        String name; - interface
+//        name = "Harish"; - class implement
+
+        // xpath
+        // Webdriver driver = new Chromedriver();
 
     }
 
@@ -49,14 +64,14 @@ public class firstTestCase {
 
         WebElement element = findElement(driver,Locators.TextArea_Google_SearchBar);
 
-        driver.manage().timeouts().implicitlyWait(30, SECONDS);
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].style.border='3px solid red'", element);
-
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-        click(element);
+//        driver.manage().timeouts().implicitlyWait(30, SECONDS);
+//
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].style.border='3px solid red'", element);
+//
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//
+//        click(element);
 
         // login
 

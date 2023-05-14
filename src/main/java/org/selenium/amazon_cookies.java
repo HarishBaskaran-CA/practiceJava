@@ -8,9 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+import java.util.Set;
 
-public class tutorialsPoint_selenium {
+public class amazon_cookies {
 
     @Test
     public void test(){
@@ -23,15 +23,24 @@ public class tutorialsPoint_selenium {
 
         WebDriver driver = new ChromeDriver(options);
 
-        driver.get("https://www.tutorialspoint.com/scroll-element-into-view-with-selenium");
-        WebElement element = driver.findElement(By.xpath("//h2[text()='Output']"));
+        driver.get("https://www.amazon.in/");
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", element);
+        Set<Cookie> cookies = driver.manage().getCookies();
+        cookies.forEach(x -> System.out.println(x.getName()));
 
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.ALT).build().perform();
-        actions.sendKeys(Keys.ALT).sendKeys(Keys.ENTER).build().perform();
+        System.out.println(driver.manage().getCookieNamed("session-id"));
+
+
+    /*
+        1. ui automation
+            1. login operation
+            2. cookie - extract the session token
+            3. store it in a java variable
+            4. close ui automation
+        2. BE automation
+            1. use the stored token
+            2. trigger api calls
+     */
 
     }
 }

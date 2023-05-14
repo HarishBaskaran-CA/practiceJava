@@ -2,14 +2,17 @@ package org.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class firstScript {
 
+    @Parameters("chrome")
     @BeforeSuite
-    public void BeforeSuite() {
+    public void BeforeSuite( String browser) {
         System.out.println("BeforeSuite");
     }
     @BeforeTest
@@ -35,6 +38,12 @@ public class firstScript {
     invocation count
     priority
      */
+
+    @Test
+    public void zeroCase () {
+        @FindBy("")
+        WebElement input;
+    }
 
     @Test(alwaysRun = true, groups = "regression", priority = 2)
     public void FirstTest() {
